@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local credentials and environment files
+.env
+.env.*
+*.pem
+*.key
+
+# Editors
+.vscode/
+.idea/
