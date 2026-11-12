@@ -1,0 +1,10 @@
+如何查看
+1. 解压后，双击 index.html，用浏览器打开交互式看板。它是单文件静态页面，不需要安装程序或联网；岗位源链接需要联网才能打开。
+2. README.md 说明样本范围、统计口径、更新流程、局限和面试介绍。
+3. data/postings.csv 是岗位清单；data/evidence.csv 是逐岗位技能证据；data/audit_log.csv 是抽查和规则修正记录。
+4. 分享时请同时说明这是 26 条目的性样本，不是全市场统计；部分来源为第三方，21 条岗位的发布日期未标注，且26 条均有复核记录，但来源强度不同：部分官网正文可读，部分只读到官方索引或第三方详情页；具体限制见岗位主表 review_status 与审计日志。
+
+复现更新流程
+需要 Python 3。将新岗位按 data/new_postings_template.csv 格式放入 data/new_postings.csv，在项目目录运行：
+python3 scripts/update_dashboard.py
+脚本只处理本地已填写的岗位数据，不会自动抓取招聘网站。
